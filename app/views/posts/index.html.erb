@@ -1,0 +1,12 @@
+Hello World
+
+Create a new post!
+
+<%= link_to "New Post", new_post_path %>
+
+<% @posts.each do |post| %>
+  <h2>Post <%= post.id %></h2>
+  View Count: <p><%= post.view_count %> <br></p>
+  <%= link_to "Show", post %>
+  <%= link_to "Delete", post_path(post), method: :delete %>
+<% end %>
